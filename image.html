@@ -19,22 +19,26 @@
         vr-mode-ui="enabled: false">
 
         <a-assets>
-            <a-asset-item id='tax' src='./assets/CesiumMan.glb'></a-asset-item>
-            <a-asset-item id="money" src="./assets/money_stacks.glb"></a-asset-item>
-            <a-asset-item id='jail' src='./assets/CesiumMan.glb'></a-asset-item>
-            <a-asset-item id="chance" src="./assets/Duck.glb"></a-asset-item>
+            <a-asset-item id='tax' src='./assets/papers__envelopes.glb'> </a-asset-item>
+            <a-asset-item id="money" src="./assets/money_stacks.glb"> </a-asset-item>
+            <a-asset-item id='jail' src='./assets/a_jail_cell.glb'> </a-asset-item>
+            <a-asset-item id="chance" src="./assets/keychain_clover.glb"> </a-asset-item>
         </a-assets>
 
         <a-entity mindar-image-target="targetIndex: 0">
-            <a-box position=" 0 0 0" color="red" opacity="0.4"></a-box>
+            <a-entity id='tax' scale="1 1 1"></a-entity>
         </a-entity>
 
         <a-entity mindar-image-target="targetIndex: 1">
-             <a-entity id='money' scale="0.7 0.7 0.7" ></a-entity>
+            <a-entity id='money' scale="1 1 1"></a-entity>
         </a-entity>
 
         <a-entity mindar-image-target="targetIndex: 2">
-            <a-box position=" 0 0 0" color="blue" opacity="0.4"></a-box>
+            <a-entity id='jail' scale="1 1 1"></a-entity>
+        </a-entity>
+
+        <a-entity mindar-image-target="targetIndex: 2">
+            <a-entity id='chance' scale="1 1 1"></a-entity>
         </a-entity>
 
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
