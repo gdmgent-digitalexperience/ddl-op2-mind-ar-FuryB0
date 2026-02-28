@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-face-aframe.prod.js"></script>
+
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+<button class="switch-button" id="face-button">
+  SWITCH STYLE
+</button>
+
+<a-scene
+  mindar-face
+  embedded
+  color-space="sRGB"
+  renderer="colorManagement: true"
+  vr-mode-ui="enabled: false"
+>
+
+  <a-camera active="false"></a-camera>
+
+  <!-- AnchorIndex 168 = forehead -->
+  <a-entity mindar-face-target="anchorIndex: 168" id="face-anchor">
+    <a-box id="uno-crown"
+      position="0 0.3 0"
+      scale="0.2 0.2 0.2"
+      color="red">
+    </a-box>
+  </a-entity>
+
+</a-scene>
+
+<script src="./scripts/face.js" defer></script>
+</body>
+</html>
